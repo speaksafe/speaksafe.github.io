@@ -6,6 +6,25 @@
 
 <!-- <link rel="stylesheet" type="text/css" media="all" href="./css/styles.css" /> -->
 <link rel="stylesheet" type="text/css" media="all" href="./css/spsf.css" />
+<script src="./scripts/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function () {
+    var scrollTop = 0;
+    var breakingHeight = 200;
+
+    var handleScroll = function () {
+        scrollTop = $(window).scrollTop();
+        if (scrollTop >= breakingHeight) {
+            $('#navBar').addClass('spsf-scrolled-nav');
+        } else if (scrollTop < breakingHeight) {
+            $('#navBar').removeClass('spsf-scrolled-nav');
+        }
+
+    };
+    handleScroll();
+    $(window).scroll(handleScroll);
+})
+</script>
 
 <style>    
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
@@ -44,6 +63,38 @@ header .spsf-display-left {
     height: 96px;
     margin-bottom: 24px;
 }
+
+#navBar .logo img{
+    width: 128px;
+    height: 128px;
+    -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s;
+}
+
+#navBar .logo {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: transparent;
+}
+
+#navBar .logo:hover {
+    background: transparent!important;
+}
+
+#navBar.spsf-scrolled-nav .logo img{
+    width: 27px;
+    height: 27px;
+}
+
+#navBar.spsf-scrolled-nav .logo {
+    position: relative;
+    top: inherit;
+}
+
+#navBar.spsf-scrolled-nav .logo:hover {
+    background-color: #ccc!important;
+}
+
 </style>
 
 <title>Speak Safe - Coach prise de parole</title>
@@ -52,7 +103,7 @@ header .spsf-display-left {
     <!-- Nav Bar -->      
     <div class="spsf-top">
         <nav class="spsf-bar spsf-white spsf-card" id="navBar">
-            <a href="#home" class="spsf-bar-item spsf-button spsf-wide">LOGO</a>
+            <a href="#home" class="spsf-bar-item spsf-button spsf-wide logo"><img alt="Speak safe" src="./img/logo-fond-couleur.png" /></a>
             
             <div class="spsf-right spsf-hide-small">
                 <a href="#why" class="spsf-bar-item spsf-button">Pourquoi?</a>
@@ -65,9 +116,8 @@ header .spsf-display-left {
     <!-- header -->
     <header class="bgimg-1 spsf-display-container spsf-grayscale-min" id="home">
         <div class="spsf-display-left spsf-text-white">
-            <span class="spsf-jumbo spsf-hide-small">Speak safe!</span><br />
-            <span class="spsf-xxlarge spsf-hide-large spsf-hide-medium">Speak safe!</span><br />    
-            <span class="spsf-large">Consulting prise de parole</span>
+            <span class="spsf-jumbo spsf-hide-small">Consulting prise de parole</span><br />
+            <span class="spsf-xxlarge spsf-hide-large spsf-hide-medium">Consulting prise de parole</span><br />    
         </div> 
     </header>
 
