@@ -1,113 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- <link rel="stylesheet" type="text/css" media="all" href="./css/styles.css" /> -->
-<link rel="stylesheet" type="text/css" media="all" href="./css/spsf.css" />
-<script src="./scripts/jquery-3.3.1.min.js"></script>
-<script>
-$(document).ready(function () {
-    var scrollTop = 0;
-    var breakingHeight = 200;
+    <link rel="icon" type="image/png" href="./img/favicon.png" /> 
+    <link rel="stylesheet" type="text/css" media="all" href="./css/spsf.css" />
+    <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var scrollTop = 0;
+            var breakingHeight = 200;
 
-    var handleScroll = function () {
-        scrollTop = $(window).scrollTop();
-        if (scrollTop >= breakingHeight) {
-            $('#navBar').addClass('spsf-scrolled-nav');
-        } else if (scrollTop < breakingHeight) {
-            $('#navBar').removeClass('spsf-scrolled-nav');
+            var handleScroll = function() {
+                scrollTop = $(window).scrollTop();
+                if (scrollTop >= breakingHeight) {
+                    $('#navBar').addClass('spsf-scrolled-nav');
+                } else if (scrollTop < breakingHeight) {
+                    $('#navBar').removeClass('spsf-scrolled-nav');
+                }
+
+            };
+            handleScroll();
+            $(window).scroll(handleScroll);
+        })
+    </script>
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: proxima-nova,sans-serif;
+        }
+        
+        body,
+        html {
+            height: 100%;
+            line-height: 1.8rem;
+        }
+        
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("./img/header.jpg");
+            min-height: 100%;
         }
 
-    };
-    handleScroll();
-    $(window).scroll(handleScroll);
-})
-</script>
+        .bg-grey-top {
+            background-position: top;
+            background-repeat: no-repeat;
+            background-image: url("./img/bg-grey-top.png");
+            padding-top: 96px!important;
+        }
 
-<style>    
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        .bg-grey-bottom {
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-image: url("./img/bg-grey-bottom.png");
+            padding-bottom: 96px!important;
+        }
 
-body, html {
-    height: 100%;
-    line-height: 1.8rem;
-}
+        .bg-green-top {
+            background-position: top;
+            background-repeat: no-repeat;
+            background-image: url("./img/bg-green-top.png");
+            padding-top: 96px!important;
+        }
 
-.bgimg-1 {
-    background-position: center;
-    background-size: cover;
-    background-image: url("./img/header.jpg");
-    min-height: 100%;
-}
+        .bg-green-bottom {
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-image: url("./img/bg-green-bottom.png");
+            padding-bottom: 96px!important;
+        }
+        
+        header .spsf-display-left {
+            padding: 48px;
+        }
+        
+        .portrait {
+            border-radius: 50%;
+        }
+        
+        #why,
+        #intro,
+        #who,
+        #coaching {
+            padding: 32px 16px 32px 48px;
+        }
+        
+        #offers {
+            padding: 32px 48px 32px 48px;
+        }
+        
+        .coaching-grid,
+        .coaching-bottom {
+            margin-top: 32px
+        }
+        
+        .icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 24px;
+        }
+        
+        #navBar .logo img {
+            width: 128px;
+            height: 128px;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+        
+        #navBar .logo {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background: transparent;
+        }
+        
+        #navBar .logo:hover {
+            background: transparent!important;
+        }
+        
+        #navBar.spsf-scrolled-nav .logo img {
+            width: 27px;
+            height: 27px;
+        }
+        
+        #navBar.spsf-scrolled-nav .logo {
+            position: relative;
+            top: inherit;
+        }
+        
+        #navBar.spsf-scrolled-nav .logo:hover {
+            background-color: #ccc!important;
+        }
 
-header .spsf-display-left {
-    padding: 48px;
-}
+        .spsf-name {
+            /*color: #42c1da!important;*/
+            font-weight: bold;
+        }
+    </style>
 
-#why, #intro {
-    padding:128px 16px;
-}
-
-#coaching {
-    padding: 128px 48px;
-}
-
-.coaching-grid, .coaching-bottom {
-    margin-top: 64px
-}
-
-.coaching-icon {
-    width: 96px;
-    height: 96px;
-    margin-bottom: 24px;
-}
-
-#navBar .logo img{
-    width: 128px;
-    height: 128px;
-    -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s;
-}
-
-#navBar .logo {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    background: transparent;
-}
-
-#navBar .logo:hover {
-    background: transparent!important;
-}
-
-#navBar.spsf-scrolled-nav .logo img{
-    width: 27px;
-    height: 27px;
-}
-
-#navBar.spsf-scrolled-nav .logo {
-    position: relative;
-    top: inherit;
-}
-
-#navBar.spsf-scrolled-nav .logo:hover {
-    background-color: #ccc!important;
-}
-
-</style>
-
-<title>Speak Safe - Coach prise de parole</title>
+    <title>Speak Safe - Coach prise de parole</title>
 </head>
+
 <body>
-    <!-- Nav Bar -->      
+    <!-- Nav Bar -->
     <div class="spsf-top">
         <nav class="spsf-bar spsf-white spsf-card" id="navBar">
             <a href="#home" class="spsf-bar-item spsf-button spsf-wide logo"><img alt="Speak safe" src="./img/logo-fond-couleur.png" /></a>
-            
+
             <div class="spsf-right spsf-hide-small">
-                <a href="#why" class="spsf-bar-item spsf-button">Pourquoi?</a>
-                <a href="#intro" class="spsf-bar-item spsf-button">Qui?</a>
-                <a href="#coaching" class="spsf-bar-item spsf-button">Quoi?</a>
+                <a href="#why" class="spsf-bar-item spsf-button">Pourquoi ?</a>
+                <a href="#offers" class="spsf-bar-item spsf-button">Offres</a>
+                <a href="#intro" class="spsf-bar-item spsf-button">&Agrave; propos</a>
+                <a href="mailto:contact@speaksafe.fr" class="spsf-bar-item spsf-button">Contact</a>
             </div>
         </nav>
     </div>
@@ -116,75 +171,93 @@ header .spsf-display-left {
     <header class="bgimg-1 spsf-display-container spsf-grayscale-min" id="home">
         <div class="spsf-display-left spsf-text-white">
             <span class="spsf-jumbo spsf-hide-small">Consulting prise de parole</span><br />
-            <span class="spsf-xxlarge spsf-hide-large spsf-hide-medium">Consulting prise de parole</span><br />    
-        </div> 
+            <span class="spsf-xxlarge spsf-hide-large spsf-hide-medium">Consulting prise de parole</span><br />
+        </div>
     </header>
 
     <!-- Why -->
-    <section class="spsf-container" id="why">
-        <h1 class="spsf-center">Pourquoi Speak safe?</h1>
-        <p class="spsf-center spsf-large">Pour créer un positionnement de travail dans la bienveillance qui vous permettra de transmettre votre idée à votre
-            manière !</p>
-        <p class="spsf-center spsf-large">Booster votre message pour un meilleur impact !</p>
-        <p class="spsf-center spsf-large">Apprendre à parler en public librement en se sentant à l’aise !</p>
+    <section class="spsf-container spsf-center bg-green-top" id="why">
+        <img alt="" class="icon" src="./img/mic.svg" />
+        <h1>Pourquoi <span class="spsf-name">Speak Safe</span>?</h1>
+        <p>Apprenez à parler librement en public en se sentant à l’aise :</p>
+        <p><strong><span class="spsf-name">Speak Safe</span> c’est croire en soi, se lancer, répéter et trouver la bonne méthode.</strong></p>
+        <p>Boostez votre message pour un meilleur impact !</p>
+        <p>Travailler le fil conducteur du discours pour clarifier votre message.</p>
+    </section>
+
+    <!-- How -->
+    <section class="spsf-container spsf-center" id="who">
+            <img alt="" class="icon" src="./img/send.svg" />
+        <h1>Pour qui?</h1>
+        <p>Vous prenez la parole <strong>ponctuellement</strong> : meet-up, séminaire</p>
+        <p>Vous prenez la parole <strong>tous les jours</strong> : réunions, présentations, démonstrations.</p>
+    </section>
+
+    <section class="spsf-container spsf-center bg-grey-bottom" id="coaching">
+        <img alt="" class="icon" src="./img/repeat.svg" />
+        <h1>Comment ?</h1>
+        <p>Apprenez de manière itérative en vous amusant.</p>
+        <p><strong>Jouez avec la voix et les mots ! Jouer avec votre public ! Construisez la relation !</strong></p>
+    </section>
+
+    <!-- What -->
+    <section class="spsf-container spsf-center" id="offers">
+        <h1>Nos offres</h1>
+        <div class="coaching-grid spsf-row-padding">
+            <section class="spsf-third">
+                <h1>Formule 1 : La parole en jeux</h1>
+                <p>Je découvre la prise de parole par les jeux du groupe ou en duo.</p>
+                <p class="spsf-center"><a href="./pdf/todo.pdf" target="_blank" title="Fiche formation (PDF - nouvelle fenêtre)">Fiche formation (PDF)</a></p>
+            </section>
+            <section class="spsf-third">
+                <h1>Formule 2 : L’évènement prend la parole</h1>
+                <p>Le pitch, le salon, la conférence, le recrutement : comment y arriver ?</p>
+                <p class="spsf-center"><a href="./pdf/todo.pdf" target="_blank" title="Fiche formation (PDF - nouvelle fenêtre)">Fiche formation (PDF)</a></p>
+            </section>
+            <section class="spsf-third">
+                <h1>Formule 3 : Speak safe at work</h1>
+                <p>La parole en réunion ou en présentation ou en démonstration.</p>
+                <p class="spsf-center"><a href="./pdf/todo.pdf" target="_blank" title="Fiche formation (PDF - nouvelle fenêtre)">Fiche formation (PDF)</a></p>
+            </section>
+        </div>
+        <p><strong>Pour toutes les formules, je me déplace au sein de votre entreprise ou sur le lieu qui vous convient.</strong></p>
+        <p>Contact: <a href="mailto:contact@speaksafe.fr">contact@speaksafe.fr</a></p>
     </section>
 
     <!-- intro -->
-    <section class="spsf-container spsf-light-grey" id="intro">
-        <p>Bonjour je suis Jayanti Bertin, toujours partante pour partager des savoirs faire et m’adapter à chacun.</p>
-        <p>J’ai appris à communiquer une idée une émotion au conservatoire et je l’ai mis en pratique dans les concerts et productions.
-            Au cours de mes diverses expériences professionnelles, j’ai toujours eu un manque, malgré des super missions
-            et des super collègues : Il s’agit toujours d’objectifs à atteindre pour l’entreprise sans que je me sente à
-            ma place.</p>
-        <p>J’ai eu la possibilité de prendre le temps pour savoir ce que je voulais et pouvais apporter au monde du travail
-            sans perdre de vue mes valeurs : L’épanouissement de l’humain dans le travail.</p>
-        <p>C’est à ce moment que j’ai pris conscience que communiquer une idée, un projet n’était pas quelque chose d’inné !</p>
-        <p>Je pouvais du coup lier l’humain et la réalisation du projet :la réussite de la prise de parole.</p>
-    </section>
-    <section class="spsf-container" id="coaching">
-        <p class="coaching-header spsf-center">Sans le savoir vous gérez votre stress en passant par ce questionnement ! Pourquoi ? A qui ? Comment ?</p>
-        <div class="coaching-grid spsf-row-padding spsf-center">
-            <section class="spsf-third">
-                <img alt="" src="img/message-circle.svg" class="coaching-icon" />
-                <h1>Pourquoi parler en public ? Qu’est-ce que je dois présenter ?</h1>
-                <p>Divers exemples : Un pitch, une conférence, un point hebdomadaire, une information aux équipes…</p>
-                <p>La situation donnera la forme à votre intervention.</p>
-            </section>
-            <section class="spsf-third">
-                    <img alt="" src="img/users.svg" class="coaching-icon" />
-                <h1>A quel public je parle ?</h1>
-                <p>Savoir cibler son public avant toute intervention.</p>
-                <p>Adapter son discours, la longueur et le vocabulaire d’entreprise et travailler votre support dans ce sens !</p>
-            </section>
-            <section class="spsf-third">
-                    <img alt="" src="img/mic.svg" class="coaching-icon" />
-                <h1>Comment je parle ?</h1>
-                <p>Il y a un savoir faire a actionner et à valoriser. Vous savez déjà le faire mais il faut s’entraîner !</p>
-                <p>Est-ce que je parle assez fort?</p>
-                <p>Est-ce que je prends le temps ?</p>
-            </section>
-        </div>
-        <div>
-            <p class="spsf-center">A chaque étape du speach safe on travaillera sur la prise de parole dans la bienveillance.</p>
-            <p class="spsf-center">Les exercices seront filmés et enregistrés pour pouvoir être débriefés.</p>
-            <p class="spsf-center">Vous êtes prêt ? Foncez !</p>
+    <section class="spsf-container bg-green-bottom" id="intro">
+        <div class="spsf-row-padding">
+            <div class="spsf-quarter">
+                <img alt="" src="./img/jay.jpg" class="portrait" />
+            </div>
+            <div class="spsf-threequarter">
+                <p>Bonjour je suis Jayanti Bertin, toujours partante pour partager des savoirs faire et m’adapter à chacun.</p>
+                <p><img alt="" src="./img/mic.svg" /> Pourquoi <span class="spsf-name">Speak Safe</span> ?</p>
+                <p>Parce que j’ai appris à communiquer une idée, une émotion et à accompagner les personnes dans leurs gestes de la vie quotidienne.J'ai appris la communication d'une idée pendant mes études au conservatoire de chant et l'ai mise en pratique pendant les productions en tant que chanteuse lyrique. Je m'en sers tout les jours en entreprise. </p>
+                <p>J'ai appris l'accompagnement de la personne dans la bienveillance et l'ai mis en pratique au CHU de Nantes en tant qu'aide soignante diplômée d'état. J'ai toujours eu le souci de la bienveillance sur tous les postes que j'ai occupés : c'est un état d'esprit. </p>
+                <p><img alt="" src="./img/repeat.svg" /> Comment faire se partage?</p>
+                <p>Je crois dans la méthode itérative, nous apprenons en faisant, en s'entrainant, en s'amusant. Il est essentiel de prendre de la distance et de se faire confiance. Comme une recette de cuisine on a les ingrédients et on les goûte, on les teste et on recommence! </p>
+                <p>Mon rôle : Vous accompagner dans le processus du <span class="spsf-name">Speak Safe</span> dans le jeu et la bienveillance, partager et trouver votre méthode!</p>
+            </div>
         </div>
     </section>
 
     <!-- footer -->
     <footer class="spsf-black spsf-padding-64 spsf-container spsf-row-padding">
+        <section class="spsf-third spsf-medium">
+            <h1 class="spsf-medium">Contactez-nous</h1>
+            <p>Contact: <a href="mailto:contact@speaksafe.fr">contact@speaksafe.fr</a></p>
+        </section>
         <section class="spsf-third spsf-text-grey spsf-tiny" id="credits">
             <h1 class="spsf-tiny">Crédits</h1>
-            <p></p><a href="https://feathericons.com/">feathericons</a></p>
+            <p><a href="https://feathericons.com/">feathericons</a></p>
             <p><a href="https://pixabay.com/fr/des-bulles-de-savon-bulles-amusement-83758/">pixabay.com</a></p>
             <p>Nicolas Gomez</p>
         </section>
         <section class="spsf-third">
 
         </section>
-        <section class="spsf-third">
-
-        </section>
     </footer>
 </body>
+
 </html>
