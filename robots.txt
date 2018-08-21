@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /pdf/
+
+Sitemap: https://www.speaksafe.fr/sitemap.xml
