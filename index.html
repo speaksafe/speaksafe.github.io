@@ -96,10 +96,11 @@
         
         .portrait {
             border-radius: 50%;
+            max-width: 100%;
         }
         
         #why,
-        #intro,
+        #about,
         #who,
         #coaching {
             padding: 32px 16px 32px 48px;
@@ -165,6 +166,13 @@
         .spsf-color--second {
             color: #3ea9b3;
         }
+
+        @media (max-height:520px) {
+            .subtitle {
+                transform: none;
+                -ms-transform: none;
+            }
+        }
     </style>
 </head>
 
@@ -177,7 +185,7 @@
             <div class="spsf-right spsf-hide-small">
                 <a href="#why" class="spsf-bar-item spsf-button">Pourquoi ?</a>
                 <a href="#offers" class="spsf-bar-item spsf-button">Formules</a>
-                <a href="#intro" class="spsf-bar-item spsf-button">&Agrave; propos</a>
+                <a href="#about" class="spsf-bar-item spsf-button">&Agrave; propos</a>
                 <a href="mailto:contact@speaksafe.fr" class="spsf-bar-item spsf-button">Contact</a>
             </div>
         </nav>
@@ -185,7 +193,7 @@
 
     <!-- header -->
     <header class="bgimg-1 spsf-display-container spsf-grayscale-min" id="home">
-        <div class="spsf-display-left spsf-text-white">
+        <div class="subtitle spsf-display-left spsf-text-white">
             <span class="spsf-jumbo spsf-hide-small">Consulting prise de parole</span><br />
             <span class="spsf-xxlarge spsf-hide-large spsf-hide-medium">Consulting prise de parole</span><br />
         </div>
@@ -252,21 +260,26 @@
         <p><strong><span class="spsf-color--second">Contact pour un devis ou une formule personnalisée :</span></strong> <a href="mailto:contact@speaksafe.fr">contact@speaksafe.fr</a></p>
     </section>
 
-    <!-- intro -->
-    <section class="spsf-container bg-green-bottom" id="intro">
+    <!-- about -->
+    <section class="spsf-container bg-green-bottom" id="about">
         <div class="spsf-row-padding">
             <div class="spsf-quarter">
                 <img alt="" src="./img/jay.jpg" class="portrait" />
             </div>
             <div class="spsf-threequarter">
-                <p>Bonjour je suis Jayanti Bertin, toujours partante pour partager des savoir faire et m’adapter à chacun.</p>
+                <!-- <p>Bonjour je suis Jayanti Bertin, toujours partante pour partager des savoir faire et m’adapter à chacun.</p>
                 <p><img alt="" src="./img/mic.svg" /> Pourquoi <span class="spsf-name">Speak Safe</span> ?</p>
                 <p>Parce que j’ai appris à <strong>communiquer une idée</strong>, une émotion au conservatoire de chant et que je l’<strong>utilise tous les jours</strong> dans ma vie professionnelle.</p>
                 <p>Savoir parler en public <strong>donne de l’assurance</strong> dans son métier et fait partie de mon parcours professionnel : professeur de musique ou de chant, chargée de communication, aide à la personne, les ressources humaines, l’accueil au public. 
                 <p>Je me forme actuellement en <strong>psychophonie Marie Louise Aucher®</strong> auprès d’Annie Paris Durieux pour l’enseignement de la pose de la voix.</p>
                 <p><img alt="" src="./img/repeat.svg" /> Comment faire ce partage?</p>
                 <p>J’utilise la <strong>méthode itérative</strong>, nous apprenons en faisant, en s’entraînant, <strong>en s'amusant, pas à pas</strong>. Il est essentiel de prendre de la distance et de se faire confiance. Comme une recette de cuisine on a les ingrédients et on les goûtes, <strong>on les teste et on recommence!</strong></p>
-                <p>Mon rôle : vous accompagner dans le processus du <span class="spsf-name">Speak Safe</span> dans le jeu et la bienveillance, partager et trouver votre méthode!</p>
+                <p>Mon rôle : vous accompagner dans le processus du <span class="spsf-name">Speak Safe</span> dans le jeu et la bienveillance, partager et trouver votre méthode!</p> -->
+                <p>Bonjour, Je m’appelle Jayanti Bertin, communicante par nature.</p>
+                <p>Tout au long de mon parcours professionnel de Chanteuse lyrique, enseignante, aide soignante, chargée de communication,assistante ressources humaines, commerciale et standardiste, j’ai acquis mon expérience de communicante en pratiquant auprès d’un public varié.</p>
+                <p>La méthode itérative que je transmets dans le processus du speak safe est celle que je pratique quotidiennement et qui me correspond. Je vous accompagne dans la bienveillance par le moyen du jeu.</p>
+                <p>Je vous aide à acquérir des bases qui vous correspondent par la pratique. Cela vous permet d’inclure la mémoire corporelle au travail intellectuel.</p>
+                <p>Je continue à me former en psychophonie Marie Louise Aucher® auprès d’Annie Paris Durieux pour l’enseignement de la pose de la voix dans la bienveillance.</p>
             </div>
         </div>
     </section>
