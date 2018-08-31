@@ -2,178 +2,194 @@
 <html lang="fr">
 
 <head>
-    <title>Speak Safe - Consulting prise de parole</title>
-    <meta name="description" content="Consulting et formation à la prise de parole en public sur la région nantaise." />
-    <!--tag:metas:og:start-->
-    <meta property="og:site_name" content="www.speaksafe.fr" />
-    <meta property="og:url" content="https://www.speaksafe.fr" />
-    <meta property="og:title" content="Speak Safe - Consulting prise de parole" />
-    <meta property="og:description" content="Consulting et formation à la prise de parole en public sur la région nantaise." />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:image" content="https://www.speaksafe.fr/img/logo-fond-couleur.png" />
-    <!--tag:metas:og:end-->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Speak Safe - Consulting prise de parole</title>
+<meta name="description" content="Consulting et formation à la prise de parole en public sur la région nantaise." />
+<!--tag:metas:og:start-->
+<meta property="og:site_name" content="www.speaksafe.fr" />
+<meta property="og:url" content="https://www.speaksafe.fr" />
+<meta property="og:title" content="Speak Safe - Consulting prise de parole" />
+<meta property="og:description" content="Consulting et formation à la prise de parole en public sur la région nantaise." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content="https://www.speaksafe.fr/img/logo-fond-couleur.png" />
+<!--tag:metas:og:end-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/png" href="./img/favicon.png" /> 
-    <link rel="stylesheet" type="text/css" media="all" href="./css/spsf.css" />
-    <script src="./scripts/jquery-3.3.1.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var scrollTop = 0;
-            var breakingHeight = 200;
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://www.speaksafe.fr",
+    "name": "Speak Safe",
+    "logo": "https://www.speaksafe.fr/img/logo-fond-couleur.png",
+    "areaServed": ["Nantes", "Pays de la Loire"],
+    "email": "contact@speaksafe.fr",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@speaksafe.fr"
+    }
+}
+</script>
 
-            var handleScroll = function() {
-                scrollTop = $(window).scrollTop();
-                if (scrollTop >= breakingHeight) {
-                    $('#navBar').addClass('spsf-scrolled-nav');
-                } else if (scrollTop < breakingHeight) {
-                    $('#navBar').removeClass('spsf-scrolled-nav');
-                }
+<link rel="icon" type="image/png" href="./img/favicon.png" /> 
+<link rel="stylesheet" type="text/css" media="all" href="./css/spsf.css" />
+<script src="./scripts/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var scrollTop = 0;
+        var breakingHeight = 200;
 
-            };
-            handleScroll();
-            $(window).scroll(handleScroll);
-        })
-    </script>
-
-    <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: proxima-nova,sans-serif;
-        }
-        
-        body,
-        html {
-            height: 100%;
-            line-height: 1.8rem;
-        }
-        
-        .bgimg-1 {
-            background-position: center;
-            background-size: cover;
-            background-image: url("./img/header.jpg");
-            min-height: 100%;
-        }
-
-        .bg-grey-top {
-            background-position: top;
-            background-repeat: no-repeat;
-            background-image: url("./img/bg-grey-top.png");
-            padding-top: 96px!important;
-        }
-
-        .bg-grey-bottom {
-            background-position: bottom;
-            background-repeat: no-repeat;
-            background-image: url("./img/bg-grey-bottom.png");
-            padding-bottom: 96px!important;
-        }
-
-        .bg-green-top {
-            background-position: top;
-            background-repeat: no-repeat;
-            background-image: url("./img/bg-green-top.png");
-            padding-top: 96px!important;
-        }
-
-        .bg-green-bottom {
-            background-position: bottom;
-            background-repeat: no-repeat;
-            background-image: url("./img/bg-green-bottom.png");
-            padding-bottom: 96px!important;
-        }
-        
-        header .spsf-display-left {
-            padding: 48px;
-        }
-        
-        .portrait {
-            border-radius: 50%;
-            max-width: 100%;
-        }
-        
-        #why,
-        #about,
-        #who,
-        #coaching {
-            padding: 32px 16px 32px 48px;
-        }
-        
-        #offers {
-            padding: 42px 48px 32px 48px;
-        }
-        
-        .coaching-grid,
-        .coaching-bottom {
-            margin-top: 32px
-        }
-        
-        .icon {
-            width: 64px;
-            height: 64px;
-            margin-bottom: 24px;
-        }
-        
-        #navBar .logo img {
-            width: 128px;
-            height: 128px;
-            -webkit-transition: all 1s;
-            -moz-transition: all 1s;
-            -o-transition: all 1s;
-            transition: all 1s;
-        }
-        
-        #navBar .logo {
-            position: absolute;
-            top: 50px;
-            left: 0;
-            background: transparent;
-        }
-        
-        #navBar .logo:hover {
-            background: transparent!important;
-        }
-        
-        #navBar.spsf-scrolled-nav .logo img {
-            width: 27px;
-            height: 27px;
-        }
-        
-        #navBar.spsf-scrolled-nav .logo {
-            position: relative;
-            top: inherit;
-        }
-        
-        #navBar.spsf-scrolled-nav .logo:hover {
-            background-color: #ccc!important;
-        }
-
-        .spsf-name {
-            /*color: #42c1da!important;*/
-            font-weight: bold;
-        }
-
-        .spsf-color--first {
-            color: #a6773e;
-        }
-        .spsf-color--second {
-            color: #3ea9b3;
-        }
-
-        @media (max-height:520px) {
-            .subtitle {
-                transform: none;
-                -ms-transform: none;
+        var handleScroll = function() {
+            scrollTop = $(window).scrollTop();
+            if (scrollTop >= breakingHeight) {
+                $('#navBar').addClass('spsf-scrolled-nav');
+            } else if (scrollTop < breakingHeight) {
+                $('#navBar').removeClass('spsf-scrolled-nav');
             }
+
+        };
+        handleScroll();
+        $(window).scroll(handleScroll);
+    })
+</script>
+
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: proxima-nova,sans-serif;
+    }
+    
+    body,
+    html {
+        height: 100%;
+        line-height: 1.8rem;
+    }
+    
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("./img/header.jpg");
+        min-height: 100%;
+    }
+
+    .bg-grey-top {
+        background-position: top;
+        background-repeat: no-repeat;
+        background-image: url("./img/bg-grey-top.png");
+        padding-top: 96px!important;
+    }
+
+    .bg-grey-bottom {
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-image: url("./img/bg-grey-bottom.png");
+        padding-bottom: 96px!important;
+    }
+
+    .bg-green-top {
+        background-position: top;
+        background-repeat: no-repeat;
+        background-image: url("./img/bg-green-top.png");
+        padding-top: 96px!important;
+    }
+
+    .bg-green-bottom {
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-image: url("./img/bg-green-bottom.png");
+        padding-bottom: 96px!important;
+    }
+    
+    header .spsf-display-left {
+        padding: 48px;
+    }
+    
+    .portrait {
+        border-radius: 50%;
+        max-width: 100%;
+    }
+    
+    #why,
+    #about,
+    #who,
+    #coaching {
+        padding: 32px 16px 32px 48px;
+    }
+    
+    #offers {
+        padding: 42px 48px 32px 48px;
+    }
+    
+    .coaching-grid,
+    .coaching-bottom {
+        margin-top: 32px
+    }
+    
+    .icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 24px;
+    }
+    
+    #navBar .logo img {
+        width: 128px;
+        height: 128px;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+    
+    #navBar .logo {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: transparent;
+    }
+    
+    #navBar .logo:hover {
+        background: transparent!important;
+    }
+    
+    #navBar.spsf-scrolled-nav .logo img {
+        width: 27px;
+        height: 27px;
+    }
+    
+    #navBar.spsf-scrolled-nav .logo {
+        position: relative;
+        top: inherit;
+    }
+    
+    #navBar.spsf-scrolled-nav .logo:hover {
+        background-color: #ccc!important;
+    }
+
+    .spsf-name {
+        /*color: #42c1da!important;*/
+        font-weight: bold;
+    }
+
+    .spsf-color--first {
+        color: #a6773e;
+    }
+    .spsf-color--second {
+        color: #3ea9b3;
+    }
+
+    @media (max-height:520px) {
+        .subtitle {
+            transform: none;
+            -ms-transform: none;
         }
-    </style>
+    }
+</style>
 </head>
 
 <body>
